@@ -135,15 +135,14 @@ class ServiceNowInventory():
             exit()
 
         '''Decoder le resultat JSON dans un dictionaire et test le resultat.'''
-        json_string = json.dumps(response.json())
-        #jsonhosts = response.json()
-        #print jsonhosts
+        json_hosts = response.json()
 
         '''Afficher le json'''
         #print(json.dumps(jsonhosts, indent=4))
-        print type(json_string)
-        print json_string
-        print json_string['result']
+        print type(json_hosts)
+        print (json_hosts.keys())
+        for host in json_hosts["result"]:
+            print host["name"]
 
     '''Contructeur'''
     def __init__(self):
