@@ -1,0 +1,3 @@
+defaults:
+  url : https://INSTANCE.service-now.com/api/now/table/cmdb_ci_server?sysparm_query=sys_class_name=cmdb_ci_unix_server^ORsys_class_name=cmdb_ci_linux_server^ORsys_class_name=cmdb_ci_aix_server^os!=Appliance^install_status!=7^EQ&sysparm_fields=name&sysparm_view=
+  user : YOURUSERNAME
